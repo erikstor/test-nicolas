@@ -1,0 +1,38 @@
+.form-position {
+  position: absolute;
+  margin: 10vh 5vw;
+  width: 85%;
+  max-width: 100%;
+  background-color: #f6f6f6;
+  opacity: 1;
+  border-radius: 15px;
+  max-height: 800px;
+}
+
+.inputs {
+  border-radius: 20px;
+}
+
+.btn-submit {
+  border-radius: 20px;
+}
+
+
+@media (max-width: 768px) {
+  .form-position {
+    width: 90%;
+    right: 0;
+
+  }
+
+}
+
+@media (min-width: 768px) {
+  .form-position {
+    width: 350px;
+    right: 0;
+    max-width: 50%;
+  }
+
+
+}

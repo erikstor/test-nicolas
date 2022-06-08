@@ -1,0 +1,113 @@
+<div class="card form-position">
+  <div class="card-body">
+
+    <h3>¡Cotiza la tuya!</h3>
+
+    <div class="col-12">
+      <form
+        [formGroup]="myForm"
+        (ngSubmit)="enviarDatos()"
+      >
+        <div class="col-12 mb-2">
+          <label for="modelos">Selecciona Un Modelo</label>
+          <select id="modelos" class="form-control inputs" formControlName="model">
+            <option *ngFor="let modelo of modelos" value="{{modelo.id}}">{{modelo.name}}</option>
+          </select>
+          <span
+            class="form-text text-danger"
+            *ngIf="fieldIsInvalid('model')"
+          >
+            El campo es requirido
+          </span>
+        </div>
+
+        <div class="col-12 mb-2">
+          <label for="name">Nombre Completo</label>
+          <input id="name" type="text" class="form-control inputs" formControlName="fullName"
+                 placeholder="Nombre completo">
+          <span
+            class="form-text text-danger"
+            *ngIf="fieldIsInvalid('fullName')"
+          >
+            El campo es requirido
+          </span>
+        </div>
+
+        <div class="col-12 mb-2">
+          <label for="email">Email</label>
+          <input id="email" type="email" class="form-control inputs" formControlName="email" placeholder="Email">
+          <span
+            class="form-text text-danger"
+            *ngIf="fieldIsInvalid('email')"
+          >
+            El campo es requirido
+          </span>
+        </div>
+
+        <div class="col-12 mb-2">
+          <label for="phone">Número Celular</label>
+          <input id="phone" type="email" class="form-control inputs" formControlName="phone" placeholder="Email">
+          <span
+            class="form-text text-danger"
+            *ngIf="fieldIsInvalid('phone')"
+          >
+            El campo es requirido
+          </span>
+        </div>
+
+        <div class="d-md-flex flex-row flex-wrap">
+          <div class="col mb-2 ">
+            <label for="department">Departamento</label>
+            <select id="department" class="form-control inputs" formControlName="department" (change)="chargeCities()">
+              <option
+                *ngFor="let department of departments"
+                value="{{department.id}}"
+              >
+                {{department.name}}
+              </option>
+            </select>
+            <span
+              class="form-text text-danger"
+              *ngIf="fieldIsInvalid('department')"
+            >
+            El campo es requirido
+          </span>
+          </div>
+
+          <div class="col ms-md-3 mb-2">
+            <label for="city">Ciudad</label>
+            <select id="city" formControlName="city" class="form-control inputs">
+              <option *ngFor="let city of cities" value="{{city.id}}">{{city.name}}</option>
+            </select>
+            <span
+              class="form-text text-danger"
+              *ngIf="fieldIsInvalid('city')"
+            >
+            El campo es requirido
+          </span>
+          </div>
+        </div>
+        <div class="col-12 mb-2">
+          <span>
+            <input type="checkbox" name="agree" id="agree">
+            Acepto la política de
+            <a href="https://www.ssangyong.com.co/wp-content/uploads/2020/08/PTDP-SSANGYONG-MOTOR-COLOMBIA.pdf"
+               target="_blank">
+              Tratamiento de Datos Personales
+            </a>
+          </span>
+        </div>
+
+        <button type="submit"
+                class="btn btn-dark btn-submit"
+                [disabled]="myForm.invalid"
+        >Enviar datos
+        </button>
+
+      </form>
+    </div>
+  </div>
+</div>
+
+
+

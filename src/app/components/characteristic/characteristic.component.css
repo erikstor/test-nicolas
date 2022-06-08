@@ -1,0 +1,228 @@
+.title {
+  font-size: 45px;
+}
+
+.subtitle-characteris {
+  font-size: 35px;
+}
+
+.p-size-1 {
+  font-size: 22px;
+  width: 80%;
+}
+
+.background-chasis {
+  background: url("../../../assets/Imagen_5.png") no-repeat;
+  background-size: cover;
+  min-height: 200px;
+  height: 439px;
+  position: absolute;
+  right: 0;
+}
+
+.background-motor {
+  background: url("../../../assets/motor.png") no-repeat;
+  background-size: cover;
+  min-height: 200px;
+  height: 614px;
+}
+
+.background-system {
+  background: url("../../../assets/system.png") no-repeat;
+  background-size: cover;
+  min-height: 200px;
+  height: 614px;
+  width: 50%;
+}
+
+.spacer {
+  padding: 140px 00px 0 80px;
+}
+
+
+.margin-collage {
+  margin-top: 25%;
+}
+
+.margin-collage-2 {
+  margin-top: 15%;
+}
+
+.margin-collage-3 {
+  margin-top: 10%;
+}
+
+.margin-title-bottom {
+  margin-bottom: 5%;
+}
+
+
+.spacer-2 {
+  padding: 190px 00px 0 80px;
+}
+
+.subtitle-system {
+  font-size: 40px;
+}
+
+
+.background-confort {
+  background: url("../../../assets/interior.png") no-repeat;
+  background-size: cover;
+  min-height: 200px;
+  height: 614px;
+  width: 50%;
+  margin-left: -10px;
+}
+
+
+.background-front {
+  background: url("../../../assets/capo.png") no-repeat;
+  background-size: contain;
+  min-height: 200px;
+  height: 614px;
+  width: 50%;
+}
+
+.size-gallery-img {
+  width: 100%
+}
+
+.size-garanty-img {
+  width: 100%;
+  max-width: 300px;
+}
+
+.spacer-3 {
+  padding: 1px;
+}
+
+.p-size-garanty {
+  font-size: 14px;
+}
+
+
+.btn-round {
+  border-radius: 20px;
+}
+
+
+@media (max-width: 450px) {
+  .background-chasis {
+    max-height: 180px;
+  }
+
+  .p-size-1 {
+    text-align: center;
+    width: 100%;
+  }
+
+  .subtitle-characteris {
+    text-align: center;
+    width: 100%;
+  }
+
+  .background-motor {
+    position: relative;
+    max-height: calc(100vh - 200px);
+    width: 100%;
+    display: block;
+  }
+
+  .spacer {
+    padding: 5%;
+  }
+
+  .spacer-2 {
+    padding: 5%;
+  }
+
+  .subtitle-system {
+    text-align: center;
+    width: 100%;
+  }
+
+  .background-system {
+    max-height: calc(100vh - 200px);
+    width: 100%;
+  }
+
+  .background-confort {
+    max-height: calc(100vh - 200px);
+    width: 100%;
+  }
+
+
+  .background-front {
+    max-height: calc(100vh - 200px);
+    width: 100%;
+  }
+
+
+  .margin-collage-2 {
+    margin-top: 5%;
+  }
+
+}
+
+
+@media (max-width: 768px) {
+  .background-chasis {
+    position: relative;
+    max-height: calc(100vh / 2.5);
+    width: 100%;
+    top: calc(100vh / 40);
+  }
+
+  .subtitle-characteris {
+    margin-bottom: 2rem;
+  }
+
+  .background-motor {
+    width: 100%;
+  }
+
+  .manual-wrap {
+    flex-wrap: wrap;
+  }
+
+  .uno {
+    order: 1;
+  }
+
+  .dos {
+    order: 2;
+  }
+
+
+  .spacer, .spacer-2 {
+    padding: 0;
+    text-align: center;
+  }
+
+  .p-size-1 {
+    width: 100%;
+    margin-bottom: 2em;
+  }
+
+  .subtitle-system, .subtitle-characteris {
+    margin-top: 1em;
+  }
+
+  .background-system {
+    width: 100%;
+  }
+
+  .background-confort {
+    width: 100%;
+  }
+
+  .background-front {
+    width: 100%;
+  }
+
+  .margin-collage-2 {
+    margin-top: auto;
+  }
+
+}

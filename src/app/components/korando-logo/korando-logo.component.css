@@ -1,0 +1,17 @@
+.korando-logo {
+  margin-top: 3em;
+  max-width: 300px;
+}
+
+
+.text-size-p {
+  font-size: 20px;
+}
+
+
+@media (max-width: 700px) {
+  .korando-logo {
+    width: 100%;
+    margin-top: 1.5em;
+  }
+}

@@ -1,0 +1,15 @@
+.logo {
+  position: absolute;
+  bottom: -50px;
+  left: 43px;
+  width: 242px;
+  height: 61px;
+  opacity: 1;
+}
+
+
+@media (max-width: 768px) {
+  .logo {
+    display: none;
+  }
+}
