@@ -28,54 +28,64 @@ export class FormComponent implements OnInit {
   modelos: DataFake[] = [
     {
       id: '1',
-      name: 'Rexton G4'
-    },
-    {
-      id: '2',
       name: 'Korando'
     },
     {
+      id: '2',
+      name: 'Rexton G4'
+    },
+    {
       id: '3',
-      name: 'Rexton G6'
+      name: 'Tivoli-Xlv'
     },
   ]
 
   departments: Departments[] = [
     {
       id: '1',
+      name: 'Departamentos',
+      cities:[
+        {
+          id: '1',
+          name: 'Ciudades'
+        }
+      ]
+    },
+    {
+      id: '2',
       name: 'Antioquia',
       cities: [
         {
-          id: '1',
+          id: '2',
           name: 'Medellin'
 
         }
       ]
     },
     {
-      id: '2',
+      id: '3',
       name: 'Bogotá DC',
       cities: [
         {
-          id: '2',
+          id: '3',
           name: 'Bogotá'
         }
       ]
     },
     {
-      id: '3',
+      id: '4',
       name: 'Valle del cauca',
       cities: [
         {
-          id: '3',
+          id: '4',
           name: 'Cali'
         },
         {
-          id: '4',
+          id: '5',
           name: 'Palmira'
         },
         {
-          id: '5',
+          id: '6',
           name: 'Yumbo'
         },
       ]
@@ -94,7 +104,7 @@ export class FormComponent implements OnInit {
   }
 
   fieldIsInvalid(field: string) {
-    console.log(field)
+    //console.log(field)
     return this.myForm.controls[field].errors && this.myForm.controls[field].touched
   }
 
@@ -111,6 +121,6 @@ export class FormComponent implements OnInit {
       return
     }
 
-    console.log('entro')
+    //console.log('entro')
   }
 }
