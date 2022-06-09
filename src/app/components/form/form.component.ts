@@ -32,7 +32,7 @@ export class FormComponent implements OnInit {
     },
     {
       id: '2',
-      name: 'Rexton G5'
+      name: 'Korando'
     },
     {
       id: '3',
