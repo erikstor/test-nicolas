@@ -10,3 +10,12 @@ export interface Departments {
     name: string;
     cities: DataFake[]
 }
+export interface cotizacion {
+    city:       string;
+    department: string;
+    email:      string;
+    fullName:   string;
+    model:      number;
+    phone:      string;
+    agree:      boolean;
+}

@@ -29,7 +29,12 @@
             class="form-text text-danger"
             *ngIf="fieldIsInvalid('fullName')"
           >
-            El campo es requirido
+            <div *ngIf="myForm.controls['fullName'].errors?.['required']">
+              El campo es requirido
+            </div>
+            <div *ngIf="myForm.controls['fullName'].errors?.['minlength']">
+              El campo debe ser de mínimo 6 caracteres
+            </div>
           </span>
         </div>
 
@@ -46,7 +51,7 @@
 
         <div class="col-12 mb-2">
           <label for="phone">Número Celular</label>
-          <input id="phone" type="email" class="form-control inputs" formControlName="phone" placeholder="Email">
+          <input id="phone" type="email" class="form-control inputs" formControlName="phone" placeholder="Celular">
           <span
             class="form-text text-danger"
             *ngIf="fieldIsInvalid('phone')"
@@ -88,8 +93,8 @@
           </div>
         </div>
         <div class="col-12 mb-2">
-          <span>
-            <input type="checkbox" name="agree" id="agree">
+          <span class="politicas">
+            <input type="checkbox" formControlName="agree" id="agree">
             Acepto la política de
             <a href="https://www.ssangyong.com.co/wp-content/uploads/2020/08/PTDP-SSANGYONG-MOTOR-COLOMBIA.pdf"
                target="_blank">
